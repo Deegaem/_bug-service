@@ -32,7 +32,7 @@ public class BugsResource {
     @PutMapping({"/{bugId}"})
     public Mono<Bug> putBug(@PathVariable("bugId") Long bugId, @RequestBody Bug bug) {
         return bugRepository.findById(bugId).map((c) -> {
-            c.setLabel(bug.getLabel());
+            c.setBugTitle(bug.getBugTitle());
             c.setDescription(bug.getDescription());
             c.setAssignedtoaccount(bug.getAssignedtoaccount());
             return c;
