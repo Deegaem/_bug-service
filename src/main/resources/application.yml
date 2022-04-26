@@ -1,11 +1,7 @@
 spring:
+  config:
+    import: "configserver:http://localhost:8888/"
   application:
-    name: Bugs Service
-  r2dbc:
-    url: r2dbc:postgresql://localhost:5432/bugs
-    username: postgres
-    password: postgres
-  eureka:
-    client:
-      registerWithEureka: true
-      fetchRegistry: true
+    name: bug-service
+  profiles:
+    active: "dev"
