@@ -13,7 +13,7 @@ public class Account {
     @Column
     private Long id;
     @Column
-    private String name;
+    private String lname;
     @Column
     private List<Bug> bugs;
 }

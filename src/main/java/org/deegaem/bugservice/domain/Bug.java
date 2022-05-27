@@ -15,16 +15,6 @@ public class Bug {
     @Column
     private String bugTitle;
     @Column
-    private String product;
-    @Column
-    private Long version;
-    @Column
-    private String component;
-    @Column
-    private String platform;
-    @Column
-    private String operatingsystem;
-    @Column
     private String status;
     @Column
     private String priority;
